@@ -1,0 +1,33 @@
+body {
+  font-family: Open Sans;
+}
+
+.leftbar{
+  padding-top: 100px;
+  padding-left: 25px;
+}
+
+.yearbar{
+
+}
+
+ul.centeryear {
+  width: 100%;
+  margin:0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+li.evenlyspace {
+  display: inline-block;
+  width: 20%;
+}
+
+.iconsize {
+  width:
+}
+
+.center {
+  text-align: center;
+}
