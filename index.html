@@ -9,6 +9,7 @@
 
 <!-- Loading JQuery from Google CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
 
 <body>
   <!-- Navigation Bar -->
@@ -74,19 +75,110 @@
     <!-- END Yearbar -->
 
     <!-- Missionbar -->
-    <div>
-      <div class="col-md-2 col-sm-2">
-        <nav class="navbar navbar-inverse">
-          <ul class="nav nav-stacked">
-            <li><a href="#">Mission: Thin Clients</a></li>
-            <li><a href="#">Mission: Analog to Digital Upgrades</a></li>
-            <li><a href="#">Mission: Standardization</a></li>
-            <li><a href="#">Mission: Virtual Computing</a></li>
-            <li><a href="#">Mission: Projectors</a></li>
-          </ul>
-        </nav>
+    <div class="col-md-2 col-sm-2">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <!-- First Mission -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Mission: Thin Clients
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              Electronic Classrooms<br>
+              Demonstration Classrooms<br>
+              Technology Commons<br>
+              Health and Human Sciences<br>
+              Forsyth
+            </div>
+          </div>
+        </div>
+        <!-- END First Mission -->
+
+        <!-- Second Mission -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Mission: Analog to Digital Upgrades
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+              Electronic Classrooms<br>
+              Demonstration Classrooms
+            </div>
+          </div>
+        </div>
+        <!-- END Second Mission -->
+
+        <!-- Third Mission -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Mission: Standardization
+              </a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+              Open-Access Student Labs<br>
+              Collaboration Spaces<br>
+              Meeting Rooms<br>
+              SCCM Integrations<br>
+              Casper Integration
+            </div>
+          </div>
+        </div>
+        <!-- END Third Mission -->
+
+        <!-- Fourth Mission -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingFour">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Mission: Virtual Computing
+              </a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+            <div class="panel-body">
+              Provost Pilot<br>
+              Software Portal<br>
+              Video Playback Enhancements
+            </div>
+          </div>
+        </div>
+        <!-- END Fourth Mission -->
+
+        <!-- Fifth Mission -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingFive">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Mission: Standardization
+              </a>
+            </h4>
+          </div>
+          <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+            <div class="panel-body">
+              Open-Access Student Labs<br>
+              Collaboration Spaces<br>
+              Meeting Rooms<br>
+              SCCM Integrations<br>
+              Casper Integration
+            </div>
+          </div>
+        </div>
+        <!-- END Fifth Mission -->
       </div>
     </div>
+
     <!-- END Missionbar -->
 
     <!-- Mission Icon -->
