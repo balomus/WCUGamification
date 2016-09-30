@@ -36,4 +36,37 @@ yearsApp.controller('YearsListController', function($scope){
   ];
 
   $scope.currentYear = 1;
+
+  $scope.missionList = [
+    {
+      year: 1,
+      mission: "Thin Clients",
+      missionGranular: "Electronic Classrooms<br>Demonstration Classrooms<br>Technology Commons<br>Health and Human Sciences<br>Forsyth"
+      missionDetails: "Thin Clients mission details go here."
+    }
+    {
+      year: 1,
+      mission: "Analog to Digital Upgrades",
+      missionGranular: "Electronic Classrooms<br>Demonstration Classrooms"
+      missionDetails: "Analog to Digital Upgrades mission details go here."
+    }
+    {
+      year: 1,
+      mission: "Standardization",
+      missionGranular: "Open-Access Student Labs<br>Collaboration Spaces<br>Meeting Rooms<br>SCCM Integrations<br>Casper Integration"
+      missionDetails: "Standardization mission details go here."
+    }
+    {
+      year: 1,
+      mission: "Virtual Computing",
+      missionGranular: "Provost Pilot<br>Software Portal<br>Video Playback Enhancements"
+      missionDetails: "Virtual Computing mission details go here."
+    }
+    {
+      year: 1,
+      mission: "Standardization",
+      missionGranular: "Open-Access Student Labs<br>Collaboration Spaces<br>Meeting Rooms<br>SCCM Integrations<br>Casper Integration"
+      missionDetails: "Standardization mission details go here."
+    }
+  ];
 });
