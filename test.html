@@ -4,17 +4,19 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.8/angular-sanitize.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="years.js"></script>
+
 
 </head>
 
 <body ng-controller="YearsListController">
   <div>
-    <div class="col-md-9 col-sm-7">
+    <div class="col-md-12 col-sm-7">
       <nav class="navbar navbar-inverse" role="navigation">
         <ul class="nav navbar-nav centeryear">
-          <li class="evenlyspace"><a href="" ng-click="currentYear = 1">Year 1</a></li>
+          <li class="evenlyspace"><a href="" ng-click="currentYear = 1; currentMissionList = year1MissionList;">Year 1</a></li>
           <li class="evenlyspace"><a href="" ng-click="currentYear = 2">Year 2</a></li>
           <li class="evenlyspace"><a href="" ng-click="currentYear = 3">Year 3</a></li>
           <li class="evenlyspace"><a href="" ng-click="currentYear = 4">Year 4</a></li>
@@ -23,9 +25,26 @@
       </nav>
     </div>
   </div>
-  <h2>Years</h2>
-  <span>{{ yearsList[currentYear].text }}</span>
+  <h2>Year {{ currentYear }} selected</h2>
+  <span>{{ currentMissionList[currentYear].mission }}</span>
+  <ul>
+    <li ng-repeat="mission in currentMissionList">
+      {{ mission.mission }}
+    </li>
+  </ul>
 
+  <div>
+
+    {{ currentMissionGranularList }}
+    <p ng-repeat="mission in addMissionGranular()">
+      <!-- <div ng-bind-html="currentMissionGranularList"></div> -->
+
+      <!-- <div ng-bind-html="currentMissionList[mission].missionGranular"></div> -->
+
+      <!-- {{ mission.missionGranular }} -->
+      <!-- {{ mission.missionGranular|json }} -->
+    </p>
+  </div>
   <!-- <div ng-controller="YearsListController as yearsList">
     <span>{{yearsList.missions[yearsList.currentYear()].text}}</span>
     <span>The "currentYear variable = {{yearsList.currentYear()}}</span>
