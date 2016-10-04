@@ -16,7 +16,7 @@
     <div class="col-md-12 col-sm-7">
       <nav class="navbar navbar-inverse" role="navigation">
         <ul class="nav navbar-nav centeryear">
-          <li class="evenlyspace"><a href="" ng-click="currentYear = 1; currentMissionList = year1MissionList;">Year 1</a></li>
+          <li class="evenlyspace"><a href="" ng-click="currentYear = 1; currentMissionList = year1MissionList">Year 1</a></li>
           <li class="evenlyspace"><a href="" ng-click="currentYear = 2">Year 2</a></li>
           <li class="evenlyspace"><a href="" ng-click="currentYear = 3">Year 3</a></li>
           <li class="evenlyspace"><a href="" ng-click="currentYear = 4">Year 4</a></li>
@@ -33,23 +33,31 @@
     </li>
   </ul>
 
-  <div>
+  <div ng:repeat="granular in currentMissionList">
 
-    {{ currentMissionGranularList }}
-    <p ng-repeat="mission in addMissionGranular()">
+    <div ng-bind-html="granular.missionGranular">
+
+      {{ granular.missionGranular }}
+    </div>
+  </div>
+    <!-- {{ currentMissionGranularList }} -->
+    <!-- {{ currentMissionGranularList }}
+    <p ng-repeat="mission in addMissionGranular()"> -->
       <!-- <div ng-bind-html="currentMissionGranularList"></div> -->
 
       <!-- <div ng-bind-html="currentMissionList[mission].missionGranular"></div> -->
 
       <!-- {{ mission.missionGranular }} -->
       <!-- {{ mission.missionGranular|json }} -->
-    </p>
+    <!-- </p> -->
   </div>
   <!-- <div ng-controller="YearsListController as yearsList">
     <span>{{yearsList.missions[yearsList.currentYear()].text}}</span>
     <span>The "currentYear variable = {{yearsList.currentYear()}}</span>
     <span></span>
   </div> -->
+
+  
 </body>
 
 </html>

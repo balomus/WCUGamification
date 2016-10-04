@@ -39,14 +39,31 @@ yearsApp.controller('YearsListController', function($scope){
 
   $scope.currentYear = 1;
 
+  $scope.currentMission = 1;
+
   $scope.currentMissionNumber = 0;
 
-  $scope.addMissionGranular = function(){
-    for (i = 0; i < $scope.currentMissionList.length; i++){
-      //$scope.currentMissionGranularList.push($scope.currentMissionList[i].missionGranular]);
-      // $scope.result = $scope.result + i
-    }
+  $scope.currentImage = '';
+
+
+
+  $scope.updateImage = function(ind){
+    $scope.currentImage = $scope.currentMissionList[ind + 1].mission
   };
+
+  // $scope.addMissionGranular = function(){
+  //   for (i = 0; i < $scope.currentMissionList.length; i++){
+  //     //$scope.currentMissionGranularList.push($scope.currentMissionList[i].missionGranular]);
+  //     // $scope.result = $scope.result + i
+  //   }
+  // };
+
+  // $scope.incrementCurrentMission = function(){
+  //   if ($scope.currentMissionNumber < $scope.currentMissionList.length)
+  //   {
+  //     $scope.currentMissionNumber += 1;
+  //   }
+  // };
 
   $scope.currentMissionList = [];
 
@@ -56,7 +73,7 @@ yearsApp.controller('YearsListController', function($scope){
     {
       year: 1,
       mission: "Thin Clients",
-      missionGranular: ["test 1", "test 2"],
+      missionGranular: "Electronic Classrooms<br>Demonstration Classrooms<br>Technology Commons<br>Health and Human Sciences<br>Forsyth",
       missionDetails: "Thin Clients mission details go here."
     },
     {
@@ -89,7 +106,7 @@ yearsApp.controller('YearsListController', function($scope){
     {
       year: 2,
       mission: "Mission y2m1",
-      missionGranular: "Electronic Classrooms <br> Demonstration Classrooms<br>Technology Commons<br>Health and Human Sciences<br>Forsyth",
+      missionGranular: "Electronic Classrooms<br>Demonstration Classrooms<br>Technology Commons<br>Health and Human Sciences<br>Forsyth",
       missionDetails: "Thin Clients mission details go here."
     },
     {
@@ -101,7 +118,7 @@ yearsApp.controller('YearsListController', function($scope){
     {
       year: 2,
       mission: "Standardization",
-      missionGranular: "Open-Access Student Labs\r\nCollaboration Spaces<br>Meeting Rooms<br>SCCM Integrations<br>Casper Integration",
+      missionGranular: "Open-Access Student Labs<br>Collaboration Spaces<br>Meeting Rooms<br>SCCM Integrations<br>Casper Integration",
       missionDetails: "Standardization mission details go here."
     },
     {
